@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.top-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.navbar {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.nav-elements li {
+    margin: 10px;
+}
+
+.nav-elements a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.quick-access {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.quick-item {
+    text-align: center;
+    flex: 1 1 150px;
+    max-width: 150px;
+}
+
+.quick-item figure {
+    margin: 0;
+    padding: 0;
+}
+
+.quick-item img {
+    min-width: 50px;
+    min-height: 50px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: border-color 0.3s;
+}
+
+.quick-item img:hover {
+    cursor: pointer;
+    border-color: #333;
+}
+
+.quick-item figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .top-elements {
+        padding: 15px 10px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-elements {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-elements li {
+        margin: 8px 0;
+    }
+
+    .quick-item {
+        flex: 1 1 120px; 
+        max-width: 120px;
+    }
+
+    .quick-item figcaption {
+        font-size: 12px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .top-elements {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-elements {
+        flex-direction: column;
+    }
+
+    .nav-elements li {
+        margin: 5px 0;
+    }
+
+    .quick-item {
+        flex: 1 1 100px; 
+        max-width: 100px;
+    }
+
+    .quick-item figcaption {
+        font-size: 10px;
+    }
+}
+
+
+/* Slider Window */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel :hover{cursor: pointer;}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 1 0 25%;
+    max-width: 25%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 24px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Media Queries */
+
+/* Tablets (≥768px) */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 1 0 33.33%; 
+        max-width: 33.33%;
+    }
+}
+
+/* Mobile screens (≥480px) */
+@media (max-width: 480px) {
+    .carousel-item {
+        flex: 1 0 50%; 
+        max-width: 50%;
+    }
+
+    .carousel-button {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+.collections{
+    margin-top: 70px;   
+    text-align: center;
+}
+
+.collection-gallery{
+    /* margin-top: 80px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.collections-image{
+    margin-top: 50px;
+    min-width: 250px;
+    min-height: 280px;
+    border: 2px solid black;
+    border-radius: 50% 50% 0 0;
+    cursor: pointer;
+}
